@@ -326,6 +326,12 @@ button:focus {
 	}
 }
 
+
+.form-section {
+	min-height:50vh;
+	padding: 2.5rem initial;
+}
+
 @include only_for_edge () {
 	.newsletter-popup-container .custom-control-label:after {
 		top: .4rem;

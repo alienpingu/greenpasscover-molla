@@ -193,7 +193,7 @@ function Home( props ) {
                                     Morbi in sem quis dui placerat ornare. Pellentesque odio <br />
 								nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. <br />
 								Cras consequat.
-							</p>
+						        </p>
                                 <div className="banner-info row">
                                     <div className="col-6">
                                         <div className="icon-box icon-box-side">
@@ -241,347 +241,63 @@ function Home( props ) {
                     </div>
                 </div>
             </section>
-
-{/*            <section className="playtime-section mb-4">
-                <div className="banner">
-                    <figure>
-                        <div className="lazy-overlay bg-transparent"></div>
-
+            <section className="form-section container">
+                <div className="row">
+                    <div className="col col-12 col-md-6"> 
+                        <h3>Compra la tua cover!</h3>
+                        <p>È sopravvissuto non solo a più di cinque secoli, ma anche al passaggio alla videoimpaginazione, pervenendoci sostanzialmente inalterato.</p>
                         <LazyLoadImage
-                            alt="Intro Banner"
-                            src="images/home/bg-2.png"
-                            threshold={ 100 }
-                            effect="blur"
-                            width="1903"
-                            height={ 880 }
-                        />
-                    </figure>
-                    <div className="banner-content">
-                        <h3 className="banner-subtitle">Listen all day</h3>
-                        <h2 className="banner-title">20 + Hours of <br />Playtime</h2>
-                        <p className="banner-text">
-                            Donec nec justo eget felis facilisis fermentum. Aliquam <br />
-                                porttitor mauris sit amet orci. Aenean dignissim <br />
-                                pellentesque felis.
-                            </p>
-                        <div className="banner-info d-flex mt-4">
-                            <div className="info-box">
-                                <p>Charge</p>
-                                <strong>2</strong>
-                                <p>hours</p>
-                            </div>
-                            <div className="info-box">
-                                <p>Playtime</p>
-                                <strong>20</strong>
-                                <p>hours</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>*/}
-
-            {/*<Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                <section className="choose-color mb-5">
-                    <div className="container">
-                        <div className="heading mb-6 text-center">
-                            <h4 className="subtitle">Material &amp; Design</h4>
-                            <h2 className="title mb-2">Find Your Color</h2>
-                            <p className="content">Featuring Active Noise Cancelling that gives you the space to create with <br />
-                            fully immersive sound.</p>
-                        </div>
-
-                        <div className="color-content">
-                            {
-                                loading ?
-                                    ""
-                                    :
-                                    products && products.length > 0 ?
-                                        <>
-                                            <OwlCarousel adClass="owl-simple owl-nav-outside" onChangeRef={ setCarouselRef } events={ events } options={ productSlider }>
-                                                { products[ 0 ].pictures.map( ( item, index ) =>
-                                                    <img src={ process.env.NEXT_PUBLIC_ASSET_URI + item.url } alt="product" key={ 'lg' + index } />
-                                                ) }
-                                            </OwlCarousel>
-                                            <div className="custom-dots">
-                                                { products[ 0 ].variants.map( ( item, index ) =>
-                                                    <button role="button" className={ `custom-dot ${ 0 === index ? 'active' : '' }` } key={ 'dot' + index } onClick={ e => changeLgImage( e, index ) }>
-                                                        <span style={ { backgroundColor: item.color } }></span>
-                                                        <span className="hidden-index d-none">0</span>
-                                                    </button>
-                                                ) }
-                                            </div>
-                                        </>
-                                        : ""
-                            }
-                        </div>
-
-                        <div className="desc text-center mt-2">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetue elit.
-                                Donec odio. Quisque volutpat mattis eros.
-					</p>
-                        </div>
-                        <div className="action text-center mt-2">
-                            <span className="price text-primary">
-                                <sup>$</sup><strong>252</strong><sup>.99</sup>
-                            </span>
-
-                            <button className="btn btn-cart btn-primary btn-round btn-cart-home" onClick={ onCartClick }>
-                                <span>Add to Cart</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-            </Reveal>
-
-            <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                <section className="gallery pt-lg-15 bg-transparent" style={ { backgroundImage: `url(images/home/bg-3.png)` } }>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <div className="content-left">
-                                    <div className="heading mt-3">
-                                        <h4 className="subtitle">Material &amp; Design</h4>
-                                        <h2 className="title mb-2">Product <br />Gallery</h2>
-                                        <p className="content mb-6">
-                                            Donec nec justo eget felis facilisis fermentum. Aliquam <br />
-                                        porttitor mauris sit amet orci. Aenean dignissim <br />
-                                        pellentesque felis.
-								    </p>
-                                    </div>
-                                    <figure className="lazy-media media-1">
-                                        <div className="lazy-overlay bg-transparent"></div>
-
-                                        <LazyLoadImage
-                                            alt="Banner"
-                                            src="images/home/banners/banner-1.jpg"
-                                            threshold={ 100 }
-                                            effect="blur"
-                                            width="472"
-                                            height="530"
-                                        />
-                                    </figure>
-                                </div>
-                            </div>
-                            <div className="col-md-6 p-md-0">
-                                <div className="content-right">
-                                    <figure className="mb-md-12 lazy-media media-2">
-                                        <div className="lazy-overlay bg-transparent"></div>
-
-                                        <LazyLoadImage
-                                            alt="Banner"
-                                            src="images/home/banners/banner-2.jpg"
-                                            threshold={ 100 }
-                                            effect="blur"
-                                            width="590"
-                                            height="532"
-                                        />
-                                    </figure>
-                                    <figure className="lazy-media media-3">
-                                        <div className="lazy-overlay bg-transparent"></div>
-
-                                        <LazyLoadImage
-                                            alt="Banner"
-                                            src="images/home/banners/banner-3.jpg"
-                                            threshold={ 100 }
-                                            effect="blur"
-                                            width="471"
-                                            height="300"
-                                        />
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </Reveal>
-
-            <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                <section className="reviews mt-15">
-                    <div className="heading mb-6 text-center">
-                        <h4 className="subtitle">Our users love us</h4>
-                        <h2 className="title">Customer Reviews</h2>
-                    </div>
-                    <div className="container">
-                        <OwlCarousel adClass="carousel-equal-height owl-simple" options={ reviewSlider }>
-                            <div className="testimonials-box">
-                                <blockquote className="testimonials text-center">
-                                    <div className="avatar">
-                                        <div className="lazy-overlay bg-transparent"></div>
-
-                                        <LazyLoadImage
-                                            alt="User"
-                                            src="images/home/users/human-1.png"
-                                            threshold={ 100 }
-                                            effect="blur"
-                                            width={ 100 }
-                                            height={ 100 }
-                                        />
-                                    </div>
-                                    <div className="ratings-contianer">
-                                        <div className="ratings">
-                                            <div
-                                                className="ratings-val"
-                                                style={ { width: '100%' } }
-                                            ></div>
-                                        </div>
-                                    </div>
-                                    <h5 className="comment-title">It's a very good product.</h5>
-                                    <p>
-                                        Dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet
-										</p>
-                                    <cite>
-                                        Sakina Stout
-										</cite>
-                                </blockquote>
-                            </div>
-                            <div className="testimonials-box">
-                                <blockquote className="testimonials text-center">
-                                    <div className="avatar">
-                                        <div className="lazy-overlay bg-transparent"></div>
-
-                                        <LazyLoadImage
-                                            alt="User"
-                                            src="images/home/users/human-2.png"
-                                            threshold={ 100 }
-                                            effect="blur"
-                                            width={ 100 }
-                                            height={ 100 }
-                                        />
-                                    </div>
-                                    <div className="ratings-contianer">
-                                        <div className="ratings">
-                                            <div
-                                                className="ratings-val"
-                                                style={ { width: '100%' } }
-                                            ></div>
-                                        </div>
-                                    </div>
-                                    <h5 className="comment-title">5 stars indeed.</h5>
-                                    <p>
-                                        In nisi neque, dapibus Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh.
-                                </p>
-                                    <cite>
-                                        Sakina Stout
-                                </cite>
-                                </blockquote>
-                            </div>
-                            <div className="testimonials-box">
-                                <blockquote className="testimonials text-center">
-                                    <div className="avatar">
-                                        <div className="lazy-overlay bg-transparent"></div>
-
-                                        <LazyLoadImage
-                                            alt="User"
-                                            src="images/home/users/human-3.png"
-                                            threshold={ 100 }
-                                            effect="blur"
-                                            width={ 100 }
-                                            height={ 100 }
-                                        />
-                                    </div>
-                                    <div className="ratings-contianer">
-                                        <div className="ratings">
-                                            <div
-                                                className="ratings-val"
-                                                style={ { width: '100%' } }
-                                            ></div>
-                                        </div>
-                                    </div>
-                                    <h5 className="comment-title">Excellent sound</h5>
-                                    <p>
-                                        Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, dapibus
-                                </p>
-                                    <cite>
-                                        Sakina Stout
-                                </cite>
-                                </blockquote>
-                            </div>
-                        </OwlCarousel>
-                    </div>
-                </section>
-            </Reveal>
-
-            <section className="overview mt-15">
-                <div className="container">
-                    <figure className="bg-image">
-                        <div className="lazy-overlay bg-transparent"></div>
-
-                        <LazyLoadImage
-                            alt="Background"
-                            src="images/home/bg-circle.png"
-                            threshold={ 100 }
-                            effect="blur"
-                            width="799"
-                            height={ 760 }
-                        />
-                    </figure>
-                    <div className="banner row d-flex">
-                        <div className="col-lg-6 order-lg-last">
-                            <figure className="banner-img">
-                                <div className="lazy-overlay bg-transparent"></div>
-
-                                <LazyLoadImage
                                     alt="Product"
-                                    src="images/home/products/headphone-2.png"
+                                    src="images/home/banners/banner-5.png"
                                     threshold={ 100 }
                                     effect="blur"
-                                    width="901"
-                                    height={ 532 }
+                                    width="653"
+                                    height={ 793 }
                                 />
-                            </figure>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="banner-content">
-                                <h3 className="banner-subtitle text-white">Specification</h3>
-                                <h2 className="banner-title text-white mb-5">Product <br /> Overview</h2>
-
-                                <div className="banner-info mb-5">
-                                    <ul className="info-list text-white">
-                                        <li>
-                                            <span className="info-icon"><i className="icon-check"></i></span>
-                                            <span className="info-content">Noise Cancelling actively blocks external noise.</span>
-                                        </li>
-                                        <li>
-                                            <span className="info-icon"><i className="icon-check"></i></span>
-                                            <span className="info-content">Up to 20+ hours of listening time</span>
-                                        </li>
-                                        <li>
-                                            <span className="info-icon"><i className="icon-check"></i></span>
-                                            <span className="info-content">Class 1 Wireless Bluetooth</span>
-                                        </li>
-                                        <li>
-                                            <span className="info-icon"><i className="icon-check"></i></span>
-                                            <span className="info-content">Product box uses 70% recycled fiber</span>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="action">
-                                    <span className="price text-white">
-                                        <sup>$</sup><strong>259</strong><sup>.99</sup>
-                                    </span>
-
-                                    <button className="btn btn-cart btn-primary btn-round btn-cart-home" onClick={ onCartClick }>
-                                        <span>Add to Cart</span>
-                                    </button>
-                                </div>
+                    </div>
+                    <div className="col col-12 col-md-6">
+                        <form>
+                          <div className="form-group">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="email" className="form-control" id="exampleFormControlInput1" name="_replyto" placeholder="name@example.com" required/>
+                          </div>
+                          <div className="form-group">
+                            <label for="inputAddress">Indirizzo spedizione</label>
+                            <input type="text" className="form-control" id="inputAddress" name="inputAddress" placeholder="Via Milano 10, Milano 20123" required/>
+                          </div>
+                          <div className="form-group">
+                            <label for="selectPhoneModel">Seleziona il modello</label>
+                            <select className="form-control" id="selectPhoneModel" name="selectPhoneModel" required="required">
+                              <option>iPhone 13</option>
+                              <option>iPhone 12</option>
+                              <option>iPhone 11</option>
+                              <option>iPhone X</option>
+                              <option>iPhone 8</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlFile1">Carica GreenPass</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="exampleFormControlFile1" required/>
+                          </div>
+                          <div className="form-group">
+                            <label for="exampleFormControlTextarea1">Ulteriori dettagli</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" name="exampleFormControlTextarea1" rows="3"></textarea>
+                          </div>
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="defaultCheck1" required />
+                              <label class="form-check-label pl-2" for="defaultCheck1">
+                                Default checkbox
+                              </label>
                             </div>
-                        </div>
+                          <button type="submit" className="btn btn-primary btn-lg btn-block">
+                              Invia form
+                          </button>
+                        </form>
                     </div>
                 </div>
-            </section>*/}
 
-            {/*<Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
-                <div className="video-banner bg-parallax" style={ { backgroundImage: "url('images/home/banners/banner-4.jpg')" } }>
-                    <a
-                        href="https://www.youtube.com/watch?v=vBPgmASQ1A0"
-                        onClick={ openVideoModal }
-                        className="btn-iframe d-flex justify-content-center"
-                    ><i className="icon-play-outline"></i></a>
-                </div>
-            </Reveal>*/}
+            </section>
+
 
             <NewsletterModal />
         </div>

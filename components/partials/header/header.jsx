@@ -30,7 +30,7 @@ function Header() {
 
     return (
         <header className="header">
-            <div className="header-top">
+{/*            <div className="header-top">
                 <div className={ containerClass }>
                     <div className="header-left">
                         <div className="header-dropdown">
@@ -73,7 +73,7 @@ function Header() {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div>*/}
             <div className="sticky-container postion-absolute">
                 <StickyHeader>
                     <div className="header-middle sticky-header border-0">
@@ -90,7 +90,8 @@ function Header() {
                             </div>
 
                             <div className="header-center">
-                                <MainMenu />
+                                {/*<MainMenu />*/}
+                                {' '}
                             </div>
 
                             <div className="header-right">
