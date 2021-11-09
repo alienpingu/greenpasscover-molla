@@ -85,7 +85,7 @@ function Home( props ) {
 
                         <LazyLoadImage
                             alt="Intro Banner"
-                            src="images/home/banners/top-banner.jpg"
+                            src="images/home/banners/top-banner-3.png"
                             threshold={ 100 }
                             effect="blur"
                             width="1903"
@@ -119,7 +119,7 @@ function Home( props ) {
             </section>
 
 
-            <section className="sound-section bg-transparent" style={ { backgroundImage: `url(images/home/bg-1.png)` } }>
+            <section className="sound-section bg-transparent" style={ { backgroundImage: `url(images/home/bg-4.jpg)` } }>
                 <Reveal keyframes={ fadeIn } delay={ 100 } duration={ 500 } triggerOnce>
                     <div className="container service">
                         <OwlCarousel adclassName="owl-simple" options={ serviceSlider }>
@@ -171,17 +171,17 @@ function Home( props ) {
 
                 <div className="container">
                     <div className="banner row d-flex">
-                        <div className="col-lg-6 mt-6 mt-lg-0 d-flex d-lg-block justify-content-center">
+                        <div className="col-lg-6 mb-3 mt-6 mt-lg-0 d-flex d-lg-block justify-content-center">
                             <figure className="banner-img">
                                 <div className="lazy-overlay bg-transparent"></div>
 
                                 <LazyLoadImage
                                     alt="Product"
-                                    src="images/home/products/headphone-1.png"
+                                    src="images/home/products/iphone-2.png"
                                     threshold={ 100 }
                                     effect="blur"
-                                    width="579"
-                                    height={ 653 }
+                                    width="653"
+                                    height={ 793 }
                                 />
                             </figure>
                         </div>
@@ -242,7 +242,7 @@ function Home( props ) {
                 </div>
             </section>
 
-            <section className="playtime-section mb-4">
+{/*            <section className="playtime-section mb-4">
                 <div className="banner">
                     <figure>
                         <div className="lazy-overlay bg-transparent"></div>
@@ -279,9 +279,9 @@ function Home( props ) {
                     </div>
 
                 </div>
-            </section>
+            </section>*/}
 
-            <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
+            {/*<Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
                 <section className="choose-color mb-5">
                     <div className="container">
                         <div className="heading mb-6 text-center">
@@ -571,9 +571,9 @@ function Home( props ) {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>*/}
 
-            <Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
+            {/*<Reveal keyframes={ fadeIn } delay={ 200 } duration={ 1000 } triggerOnce>
                 <div className="video-banner bg-parallax" style={ { backgroundImage: "url('images/home/banners/banner-4.jpg')" } }>
                     <a
                         href="https://www.youtube.com/watch?v=vBPgmASQ1A0"
@@ -581,7 +581,7 @@ function Home( props ) {
                         className="btn-iframe d-flex justify-content-center"
                     ><i className="icon-play-outline"></i></a>
                 </div>
-            </Reveal>
+            </Reveal>*/}
 
             <NewsletterModal />
         </div>
